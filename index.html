@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AmeriGas</title>
+</head>
+<body>
+	<div class="main">
+		<div class="callflow">
+			<div class="btn-callflow">
+				<button class="btn btn-back"><b>&lt;&lt;</b></button>
+				<button class="btn btn-next"><b>&gt;&gt;</b></button>
+				<input type="text" name="cfno" class="cfno" value="1" />
+			</div>
+			<div class="call-flow cf-1 cf-opening">
+				<span class="header">Opening:</span>
+				<span class="spiel">Thank you for calling AmeriGas, my name is "Jeremias".</span>
+				<span class="spiel">How may I help you, today?</span>
+				<textarea name="cf-discover" class="cf-textarea cf-data cf-discover" data-name="discovery"></textarea>
+				<span class="spiel"><b>Paraphrase: ......</b></span>
+			</div>
+			<div class="call-flow cf-2 cf-pulling">
+				<span class="header">Account Pull-up:</span>
+				<span class="spiel">May I have your <b>Account#</b> OR <b>Phone#</b>, please?</span>
+				<textarea name="cf-accphone" class="cf-textarea cf-data cf-accphone" data-name="account"></textarea>
+			</div>
+			<div class="call-flow cf-3 cf-verify">
+				<span class="header">Account Verify:</span>
+				<span class="spiel">Would you please verify your <b>Name</b> AND <b>Delivery Address</b> on the account, please?</span>
+			</div>
+			<div class="call-flow cf-4 cf-confirm">
+				<span class="header">Account Confirmation:</span>
+				<span class="spiel">For confirmation purposes, would you please confirm your <b>Mobile #</b> AND your <b>Email Address</b>, please?</span>
+			</div>
+			
+			<hr />
+		</div>
+		
+		<div class="cf-kb">
+			<input type="text" id="kbCase" onkeyup="caseSearch()" placeholder="Search for case type.." title="Type in a case type">
+			<ul id="caseList">
+				<li><a href="#">Make Payment - Sold To</a></li>
+				<li><a href="#">Down Payment - Sold To</a></li>
+				<li><a href="#">Reverse Payment - Sold To</a></li>
+				<li><a href="#">Orders (Deliveries) - Ship  To</a></li>
+				<li><a href="#">Orders (Cancel) - Ship To</a></li>
+				<li><a href="#">Delivery Suspension - Ship To</a></li>
+				<li><a href="#">AmeriRoute - Ship To</a></li>
+				<li><a href="#">Document Portal - Ship or Sold To</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="datum">
+		<span class="power-words">Power Words: Pefect! | Wonderful! | Great! | Awesome! </span>
+		<textarea class="dat-1" padding="top right bottom left"></textarea>
+	</div>
+	
+	
+	<script src="amerigas.js" charset="utf-8"></script>
+	<style>
+		* {box-sizing: border-box;}
+		.main, .datum{float:left; width:100%;}
+		.callflow, .cf-kb{float:left;width:35%;}
+		.call-flow span{display:block;}
+		.call-flow span.header{font-weight:bold;size:1.2em;padding:0 0 5px 0;}
+		.cf-textarea{width:100%;height:5em;}
+		.cf-accphone{height:2em;}
+		
+		.call-flow .spiel{font-style:italic;padding:0 0 4px 15px;}
+		span.power-words{display:block;font-weight:bold;size:1.2em;}
+		.call-flow{display:none;}
+		.cf-1{display:block;}
+		#kbCase {
+		  background-position: 10px 12px;
+		  background-repeat: no-repeat;
+		  width: 100%;
+		  font-size: 16px;
+		  padding: 12px 20px 12px 40px;
+		  border: 1px solid #ddd;
+		  margin-bottom: 12px;
+		}
+
+		#caseList {
+		  list-style-type: none;
+		  padding: 0;
+		  margin: 0;
+		}
+
+		#caseList li a {
+		  border: 1px solid #ddd;
+		  margin-top: -1px; /* Prevent double borders */
+		  background-color: #f6f6f6;
+		  padding: 12px;
+		  text-decoration: none;
+		  font-size: 18px;
+		  color: black;
+		  display: block
+		}
+
+		#caseList li a:hover:not(.header) {
+		  background-color: #eee;
+		}	
+		</style>
+
+<script>
+/*
+Make Payment - Sold To
+Down Payment - Sold To
+Reverse Payment - Sold To
+Orders (Deliveries) - Ship  To
+Orders (Cancel) - Ship To
+Delivery Suspension - Ship To
+AmeriRoute - Ship To
+Document Portal - Ship or Sold To
+
+var sitel = {
+"calls":[
+{
+"driver" : "Make Payment", 
+"caseType": "Sold To", 
+"Pullup" : "1. Click the 'ACCOUNT SEARCH' link at the LEFT side of the page. \n 2. Enter the ACCOUNT# or PHONE# \n 3. Click the 'Magnifying Glass' icon. \n 4. Click APPLICATION tab -> SAP -> INVOICE | A/R Cockpit Page: Go to INVOICE area -> click the 'INVOICE (0)' column -> put a check mark on the INVOICE# that came from the customer.  "
+},
+"driver" : "Down Payment", 
+"caseType": "Sold To", 
+"Pullup" : "1. Click the 'ACCOUNT SEARCH' link at the LEFT side of the page. \n 2. Enter the ACCOUNT# or PHONE# \n 3. Click the 'Magnifying Glass' icon. \n 4. Click APPLICATION tab -> SAP -> INVOICE | A/R Cockpit Page: Go to INVOICE area -> click the 'INVOICE (0)' column -> put a check mark on the INVOICE# that came from the customer. -> click MAKE PAYMENT button at the top right. \n 5. Company Code: OLPR \n 6. Cash Journal: 9002 \n 7. Business Area: 5738 \n 8. click the EXECUTE button  "
+]
+}
+*/
+</script>
+</body>
+</html>
